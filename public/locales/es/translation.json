@@ -1,0 +1,170 @@
+{
+    "common": {
+        "inbox": "Bandeja de entrada",
+        "calendar": "Calendario",
+        "contacts": "Contactos",
+        "settings": "Configuración",
+        "logout": "Cerrar sesión",
+        "profile": "Perfil",
+        "appointment": "Cita",
+        "save_changes": "Guardar Cambios",
+        "saving": "Guardando...",
+        "saved": "Guardado",
+        "close": "Cerrar",
+        "status": {
+            "all_status": "Todos los Estados",
+            "pending": "Pendiente",
+            "completed": "Completado",
+            "cancelled": "Cancelado",
+            "confirmed": "Confirmado"
+        },
+        "more": "Más",
+        "no_description": "No descripción"
+    },
+    "inbox": {
+        "search_placeholder": "Buscar contactos...",
+        "status": {
+            "bot_active": "Bot Activo",
+            "online": "En línea"
+        },
+        "mode": {
+            "ai": "Asistente IA",
+            "manual": "Modo Manual"
+        },
+        "input": {
+            "bot_typing": "Bot escribiendo...",
+            "placeholder": "Escribe un mensaje"
+        },
+        "ai_active_warning": "El Bot IA está activo. Paúsalo para tomar el control.",
+        "empty_state": {
+            "title": "Chat Eco AI",
+            "subtitle": "Selecciona una conversación para comenzar."
+        },
+        "no_messages": {
+            "title": "Aún no hay mensajes",
+            "subtitle": "Comienza la conversación abajo."
+        },
+        "load_more": "Cargar mensajes anteriores",
+        "role": {
+            "ai": "Bot IA"
+        }
+    },
+    "settings": {
+        "title": "Configuración",
+        "tabs": {
+            "general_hours": {
+                "header": {
+                    "title": "General y Horarios",
+                    "subtitle": "Gestiona la configuración de tu negocio."
+                },
+                "bussines_information": {
+                    "header": {
+                        "title": "Información del Negocio",
+                        "subtitle": "Configura la información de tu negocio."
+                    },
+                    "location": "Ubicación",
+                    "contact_phone": "Teléfono de Contacto",
+                    "default_duration": "Duración Predeterminada",
+                    "buffer_time": "Tiempo de Reserva"
+                },
+                "bussines_hours": {
+                    "header": {
+                        "title": "Horarios de Atención",
+                        "subtitle": "Gestiona tus horarios de atención."
+                    },
+                    "monday": "Lunes",
+                    "tuesday": "Martes",
+                    "wednesday": "Miércoles",
+                    "thursday": "Jueves",
+                    "friday": "Viernes",
+                    "saturday": "Sábado",
+                    "sunday": "Domingo",
+                    "open": "Abierto",
+                    "closed": "Cerrado",
+                    "no_appointments": "Sin Citas"
+                }
+            },
+            "reminders": {
+                "header": {
+                    "title": "Recordatorios",
+                    "subtitle": "Gestiona los recordatorios de tu negocio."
+                },
+                "whatsapp_reminder": {
+                    "header": {
+                        "title": "Recordatorio de WhatsApp",
+                        "subtitle": "Configura recordatorios automáticos de citas."
+                    },
+                    "enable_remainders": "Activar Recordatorios",
+                    "send_message_automatically": "Enviar mensaje automáticamente",
+                    "hours_before": "Horas antes"
+                }
+            },
+            "services": {
+                "header": {
+                    "title": "Servicios",
+                    "subtitle": "Gestiona los servicios de tu negocio."
+                },
+                "service": {
+                    "header": {
+                        "title": "Menú de Servicios"
+                    },
+                    "modal": {
+                        "add_new_service": {
+                            "title": "Agregar Nuevo Servicio",
+                            "description": "Descripción",
+                            "name": "Nombre",
+                            "duration": "Duración (min)",
+                            "price": "Precio"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "contacts": {
+        "header": {
+            "title": "Todos los Contactos",
+            "subtitle": "Ver y gestionar tu base de clientes."
+        },
+        "table": {
+            "contacts": {
+                "title": "Contactos",
+                "headers": {
+                    "name": "Nombre",
+                    "phone": "Teléfono",
+                    "status": "Estado",
+                    "last_active": "Última Actividad"
+                }
+            }
+        }
+    },
+    "calendar": {
+        "day": "Día",
+        "week": "Semana",
+        "month": "Mes",
+        "year": "Año",
+        "december": "Diciembre",
+        "january": "Enero",
+        "february": "Febrero",
+        "march": "Marzo",
+        "april": "Abril",
+        "may": "Mayo",
+        "june": "Junio",
+        "july": "Julio",
+        "august": "Agosto",
+        "september": "Septiembre",
+        "october": "Octubre",
+        "november": "Noviembre",
+        "monday": "Lunes",
+        "tuesday": "Martes",
+        "wednesday": "Miércoles",
+        "thursday": "Jueves",
+        "friday": "Viernes",
+        "saturday": "Sábado",
+        "sunday": "Domingo",
+        "appointment_detail": {
+            "time": "Tiempo",
+            "services": "Servicios"
+        }
+    }
+}

@@ -1,0 +1,169 @@
+{
+    "common": {
+        "inbox": "Inbox",
+        "calendar": "Calendar",
+        "contacts": "Contacts",
+        "settings": "Settings",
+        "logout": "Logout",
+        "profile": "Profile",
+        "appointment": "Appointment",
+        "save_changes": "Save Changes",
+        "saving": "Saving...",
+        "saved": "Saved",
+        "close": "Close",
+        "status": {
+            "all_status": "All Status",
+            "pending": "Pending",
+            "completed": "Completed",
+            "cancelled": "Cancelled",
+            "confirmed": "Confirmed"
+        },
+        "more": "More",
+        "no_description": "No description"
+    },
+    "inbox": {
+        "search_placeholder": "Search contacts...",
+        "status": {
+            "bot_active": "Bot Active",
+            "online": "Online"
+        },
+        "mode": {
+            "ai": "AI Assistant",
+            "manual": "Manual Mode"
+        },
+        "input": {
+            "bot_typing": "Bot is typing...",
+            "placeholder": "Type a message"
+        },
+        "ai_active_warning": "AI Bot is active. Pause it to take control.",
+        "empty_state": {
+            "title": "Eco AI Chat",
+            "subtitle": "Select a conversation to start messaging."
+        },
+        "no_messages": {
+            "title": "No messages yet",
+            "subtitle": "Start the conversation below."
+        },
+        "load_more": "Load older messages",
+        "role": {
+            "ai": "AI Bot"
+        }
+    },
+    "settings": {
+        "tabs": {
+            "general_hours": {
+                "header": {
+                    "title": "General & Hours",
+                    "subtitle": "Manage your business configuration."
+                },
+                "bussines_information": {
+                    "header": {
+                        "title": "Business Information",
+                        "subtitle": "Set your business information."
+                    },
+                    "location": "Location",
+                    "contact_phone": "Contact Phone",
+                    "default_duration": "Default Duration",
+                    "buffer_time": "Buffer Time"
+                },
+                "bussines_hours": {
+                    "header": {
+                        "title": "Business Hours",
+                        "subtitle": "Manage your business hours."
+                    },
+                    "monday": "Monday",
+                    "tuesday": "Tuesday",
+                    "wednesday": "Wednesday",
+                    "thursday": "Thursday",
+                    "friday": "Friday",
+                    "saturday": "Saturday",
+                    "sunday": "Sunday",
+                    "open": "Open",
+                    "closed": "Closed",
+                    "no_appointments": "No Appointments"
+                }
+            },
+            "reminders": {
+                "header": {
+                    "title": "Reminders",
+                    "subtitle": "Manage your business reminders."
+                },
+                "whatsapp_reminder": {
+                    "header": {
+                        "title": "WhatsApp Reminder",
+                        "subtitle": "Configure automated appointment reminders."
+                    },
+                    "enable_remainders": "Enable Reminders",
+                    "send_message_automatically": "Send message automatically",
+                    "hours_before": "Hours before"
+                }
+            },
+            "services": {
+                "header": {
+                    "title": "Services",
+                    "subtitle": "Manage your business services."
+                },
+                "service": {
+                    "header": {
+                        "title": "Service Menu"
+                    },
+                    "modal": {
+                        "add_new_service": {
+                            "title": "Add New Service",
+                            "description": "Description",
+                            "name": "Name",
+                            "duration": "Duration (min)",
+                            "price": "Price"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "contacts": {
+        "header": {
+            "title": "Contacts",
+            "subtitle": "View and manage your client base."
+        },
+        "table": {
+            "contacts": {
+                "title": "All Contacts",
+                "headers": {
+                    "name": "Name",
+                    "phone": "Phone",
+                    "status": "Status",
+                    "last_active": "Last Active"
+                }
+            }
+        }
+    },
+    "calendar": {
+        "day": "Day",
+        "week": "Week",
+        "month": "Month",
+        "year": "Year",
+        "december": "December",
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "appointment_detail": {
+            "time": "Time",
+            "services": "Services"
+        }
+    }
+}
