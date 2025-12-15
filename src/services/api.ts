@@ -9,6 +9,43 @@ const api = axios.create({
     },
 });
 
+// Request interceptor to add token
+api.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('token');
+        if (token && config.url !== '/auth/login') {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+);
+
+// Response interceptor to handle unauthorized access
+api.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (error.response && error.response.status === 401) {
+            // Unset login-related items
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            // Do NOT remove 'login_phone' and 'login_code' if 'Remember me' was used, 
+            // as the user logic in Login page handles that. Use logic requested: "borre lo que esta en localstorage refente al login"
+            // Wait, user said "borre lo que esta en localstorage refente al login", which implies clearing the session.
+            // Usually we keep "Remember Me" data so they can easily login again.
+            // I will clear the session token and user data.
+
+            // Redirect to login
+            if (window.location.pathname !== '/login') {
+                window.location.href = '/login';
+            }
+        }
+        return Promise.reject(error);
+    }
+);
+
 export interface Contact {
     _id: string;
     phoneNumber: string;
@@ -65,6 +102,12 @@ export interface SettingsResponse {
     appointmentSettings: AppointmentSettings;
     businessContext: BusinessContext;
 }
+
+// Auth
+export const login = async (phoneNumber: string, pin: string) => {
+    const response = await api.post('/auth/login', { phoneNumber, pin });
+    return response.data;
+};
 
 // Contacts
 export const getContacts = async () => {

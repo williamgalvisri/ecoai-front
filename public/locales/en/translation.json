@@ -165,5 +165,17 @@
             "time": "Time",
             "services": "Services"
         }
+    },
+    "login": {
+        "title": "Eco AI Dashboard",
+        "subtitle": "Sign in to manage your AI assistant",
+        "phone_placeholder": "Phone Number",
+        "pin_placeholder": "6-Digit PIN",
+        "remember_me": "Remember my number",
+        "sign_in": "Sign In",
+        "signing_in": "Signing in...",
+        "error_credentials": "Invalid credentials. Please checking your phone number and PIN.",
+        "error_missing_fields": "Please enter both phone number and PIN.",
+        "powered_by": "Powered by Eco"
     }
 }

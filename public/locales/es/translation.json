@@ -166,5 +166,17 @@
             "time": "Tiempo",
             "services": "Servicios"
         }
+    },
+    "login": {
+        "title": "Eco AI Dashboard",
+        "subtitle": "Inicia sesión para gestionar tu asistente IA",
+        "phone_placeholder": "Número de Teléfono",
+        "pin_placeholder": "PIN de 6 Dígitos",
+        "remember_me": "Recordar mi número",
+        "sign_in": "Ingresar",
+        "signing_in": "Ingresando...",
+        "error_credentials": "Credenciales inválidas. Por favor verifique su número y PIN.",
+        "error_missing_fields": "Por favor ingrese tanto el número como el PIN.",
+        "powered_by": "Powered by Eco"
     }
 }

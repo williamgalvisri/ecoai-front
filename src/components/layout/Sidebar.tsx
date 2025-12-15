@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Calendar, Users, Settings, X } from 'lucide-react';
+import { LayoutDashboard, Calendar, Users, Settings, X, Leaf } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { Button } from './../ui/button';
 import { useTranslation } from 'react-i18next';
@@ -38,7 +38,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
             )}>
                 <div className="p-6 border-b border-slate-800 flex items-center justify-between">
                     <div className="flex items-center gap-2 font-bold text-white text-lg">
-                        <LayoutDashboard className="h-6 w-6 text-emerald-400" />
+                        <Leaf className="h-6 w-6 text-emerald-400" />
                         <span>Eco AI</span>
                     </div>
                     <Button variant="ghost" size="icon" className="md:hidden text-slate-400" onClick={() => setOpen(false)}>
