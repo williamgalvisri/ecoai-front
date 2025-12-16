@@ -30,7 +30,7 @@ export default function ContactsPage() {
                                     <th className="h-12 px-4 align-middle font-medium text-slate-500">{t('contacts.table.contacts.headers.name')}</th>
                                     <th className="h-12 px-4 align-middle font-medium text-slate-500">{t('contacts.table.contacts.headers.phone')}</th>
                                     <th className="h-12 px-4 align-middle font-medium text-slate-500">{t('contacts.table.contacts.headers.status')}</th>
-                                    <th className="h-12 px-4 align-middle font-medium text-slate-500">{t('contacts.table.contacts.headers.lastActive')}</th>
+                                    <th className="h-12 px-4 align-middle font-medium text-slate-500">{t('contacts.table.contacts.headers.last_active')}</th>
                                 </tr>
                             </thead>
                             <tbody className="[&_tr:last-child]:border-0">

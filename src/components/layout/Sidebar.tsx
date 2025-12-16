@@ -1,9 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Calendar, Users, Settings, X, Leaf } from 'lucide-react';
+import { LayoutDashboard, Calendar, Users, Settings, X, Leaf, LogOut } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { Button } from './../ui/button';
 import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from './LanguageSwitcher';
 
 interface SidebarProps {
     open: boolean;
@@ -12,7 +11,9 @@ interface SidebarProps {
 
 export default function Sidebar({ open, setOpen }: SidebarProps) {
     const location = useLocation();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
 
     const links = [
         { icon: LayoutDashboard, label: t('common.inbox'), href: '/inbox', count: 3 },
@@ -70,12 +71,60 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                     })}
                 </nav>
 
-                <div className="p-4 border-t border-slate-800">
-                    <div className="mb-4">
-                        <LanguageSwitcher />
+                <div className="p-4 border-t border-slate-800 space-y-4">
+                    {/* Compact Language Switcher */}
+                    <div className="flex bg-slate-800/50 rounded-lg p-1">
+                        <button
+                            onClick={() => i18n.changeLanguage('en')}
+                            className={cn(
+                                "flex-1 text-xs font-medium py-1 rounded transition-colors",
+                                i18n.language === 'en' ? "bg-slate-700 text-white shadow-sm" : "text-slate-500 hover:text-slate-300"
+                            )}
+                        >
+                            EN
+                        </button>
+                        <button
+                            onClick={() => i18n.changeLanguage('es')}
+                            className={cn(
+                                "flex-1 text-xs font-medium py-1 rounded transition-colors",
+                                i18n.language === 'es' ? "bg-slate-700 text-white shadow-sm" : "text-slate-500 hover:text-slate-300"
+                            )}
+                        >
+                            ES
+                        </button>
                     </div>
-                    <div className="text-xs text-slate-500">
-                        v0.1.0 Beta
+
+                    {/* User Profile */}
+                    <div className="flex items-center gap-3 pt-2">
+                        <div className="h-9 w-9 rounded-full bg-emerald-900/30 border border-emerald-500/20 flex items-center justify-center">
+                            {user.photoUrl ? (
+                                <img src={user.photoUrl} alt="User" className="h-full w-full rounded-full object-cover" />
+                            ) : (
+                                <span className="text-emerald-500 font-semibold text-sm">
+                                    {user.firstName?.[0]}{user.lastName?.[0]}
+                                </span>
+                            )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-white truncate">
+                                {user.firstName} {user.lastName}
+                            </p>
+                            <p className="text-xs text-slate-500 truncate capitalize">
+                                {user.subscriptionPlan || 'Free'} Plan
+                            </p>
+                        </div>
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8 text-slate-400 hover:text-white hover:bg-slate-800"
+                            onClick={() => {
+                                localStorage.removeItem('token');
+                                localStorage.removeItem('user');
+                                window.location.href = '/login';
+                            }}
+                        >
+                            <LogOut className="h-4 w-4" />
+                        </Button>
                     </div>
                 </div>
             </div>
