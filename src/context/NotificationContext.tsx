@@ -12,8 +12,15 @@ export const NotificationProvider = ({ children }: { children: ReactNode }) => {
     const fetchNotifications = async () => {
         try {
             setIsLoading(true);
-            const response = await api.get<Notification[]>('/notifications');
-            setNotifications(response.data);
+            const response = await api.get('/notifications');
+            // Backend returns { success: true, data: [...] } structure
+            const data = response.data?.data || [];
+            if (Array.isArray(data)) {
+                setNotifications(data);
+            } else {
+                console.warn('Unexpected notifications response format:', response.data);
+                setNotifications([]);
+            }
         } catch (error) {
             console.error('Failed to fetch notifications:', error);
         } finally {
