@@ -132,7 +132,7 @@ export default function Inbox() {
         return id;
     }, []);
 
-    useSSE(`http://localhost:3000/api/events?sessionId=${deviceId}`, (event) => {
+    useSSE(`${import.meta.env.VITE_API_URL}/api/events?sessionId=${deviceId}`, (event) => {
         try {
             if (event.type === 'NEW_MESSAGE') {
                 const data = JSON.parse(event.data);
