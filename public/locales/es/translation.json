@@ -167,6 +167,13 @@
             "services": "Servicios"
         }
     },
+    "notifications": {
+        "title": "Notificaciones",
+        "mark_all_read": "Marcar todas como leídas",
+        "empty": "No hay notificaciones aún",
+        "new": "Nueva",
+        "viewed": "Visto"
+    },
     "login": {
         "title": "Eco AI Dashboard",
         "subtitle": "Inicia sesión para gestionar tu asistente IA",

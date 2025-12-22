@@ -3,6 +3,7 @@ import { LayoutDashboard, Calendar, Users, Settings, X, Leaf, LogOut } from 'luc
 import { cn } from '../../lib/utils';
 import { Button } from './../ui/button';
 import { useTranslation } from 'react-i18next';
+import { NotificationBell } from '../Header/NotificationBell';
 
 interface SidebarProps {
     open: boolean;
@@ -94,7 +95,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                         </button>
                     </div>
 
-                    {/* User Profile */}
+                    {/* User Profile + Notification Bell */}
                     <div className="flex items-center gap-3 pt-2">
                         <div className="h-9 w-9 rounded-full bg-emerald-900/30 border border-emerald-500/20 flex items-center justify-center">
                             {user.photoUrl ? (
@@ -113,6 +114,9 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                                 {user.subscriptionPlan || 'Free'} Plan
                             </p>
                         </div>
+
+                        <NotificationBell />
+
                         <Button
                             variant="ghost"
                             size="icon"

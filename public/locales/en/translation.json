@@ -166,6 +166,13 @@
             "services": "Services"
         }
     },
+    "notifications": {
+        "title": "Notifications",
+        "mark_all_read": "Mark all as read",
+        "empty": "No notifications yet",
+        "new": "New",
+        "viewed": "Viewed"
+    },
     "login": {
         "title": "Eco AI Dashboard",
         "subtitle": "Sign in to manage your AI assistant",

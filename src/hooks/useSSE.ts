@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { EventSourcePolyfill } from 'event-source-polyfill';
 
 export const useSSE = (url: string, onMessage: (event: MessageEvent) => void) => {
-    const eventSourceRef = useRef<EventSource | null>(null);
+    // using 'any' to avoid type mismatch between native EventSource and Polyfill if types are missing
+    const eventSourceRef = useRef<any>(null);
     const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const onMessageRef = useRef(onMessage);
@@ -12,8 +14,19 @@ export const useSSE = (url: string, onMessage: (event: MessageEvent) => void) =>
 
     useEffect(() => {
         const connect = () => {
+            const token = localStorage.getItem('token');
             console.log("Connecting to SSE...", url);
-            const eventSource = new EventSource(url);
+
+            if (!token) {
+                console.warn("No token found for SSE connection");
+                return;
+            }
+
+            const eventSource = new EventSourcePolyfill(url, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
             eventSourceRef.current = eventSource;
 
             eventSource.onopen = () => {
@@ -28,7 +41,7 @@ export const useSSE = (url: string, onMessage: (event: MessageEvent) => void) =>
             eventSource.addEventListener('NEW_MESSAGE', handler);
             eventSource.addEventListener('MESSAGE_STATUS_UPDATE', handler);
 
-            eventSource.onerror = (error) => {
+            eventSource.onerror = (error: any) => {
                 console.error('SSE Error, scheduling reconnect in 5s...', error);
 
                 // Close current connection
