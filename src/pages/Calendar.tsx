@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { getAppointments, updateAppointment, type Appointment } from '../services/api';
-import { Badge } from '../components/ui/badge';
+
 import { Select } from '../components/ui/select';
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogFooter } from '../components/ui/dialog';
 import { Button } from '../components/ui/button';

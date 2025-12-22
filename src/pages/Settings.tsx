@@ -4,7 +4,7 @@ import { getSettings, updateSettings, type Service, type BusinessHours } from '.
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
-import { Switch } from '../components/ui/switch'; // Assuming you have this or use simple checkbox/button logic
+
 import { Label } from '../components/ui/label';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '../components/ui/dialog';
 import { Bell, Save, CheckCircle, User, Briefcase, Plus, Trash2, Edit2, ChevronLeft } from 'lucide-react';
@@ -55,7 +55,9 @@ export default function Settings() {
                 setBusinessContext({
                     ...settings.businessContext,
                     hours: mergedHours,
-                    services: settings.businessContext.services || []
+                    services: settings.businessContext.services || [],
+                    location: settings.businessContext.location || '',
+                    contactPhone: settings.businessContext.contactPhone || ''
                 });
             }
         }

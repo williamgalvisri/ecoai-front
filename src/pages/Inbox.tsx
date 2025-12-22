@@ -215,7 +215,7 @@ export default function Inbox() {
 
             return { previousMessages, tempId: optimisticMessage._id };
         },
-        onSuccess: (data, variables, context) => {
+        onSuccess: (data, _variables, context) => {
             setMessages((old) => {
                 if (!Array.isArray(old)) return [];
 
@@ -229,7 +229,7 @@ export default function Inbox() {
                 );
             });
         },
-        onError: (err, variables, context) => {
+        onError: (_err, _variables, context) => {
             setMessages((old) => old.map(msg =>
                 msg._id === context?.tempId
                     ? { ...msg, status: 'failed' }
@@ -414,7 +414,6 @@ export default function Inbox() {
                                         </div>
                                     )}
                                     {messages.map((msg, idx) => {
-                                        const isOwner = msg.role === 'owner';
                                         const isOutbound = msg.role === 'owner' || msg.role === 'assistant';
 
                                         return (
