@@ -1,4 +1,4 @@
-import React, { useState, useEffect, type ReactNode } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
 import api from '../services/api'; // Adjust path if needed
 import { useSSE } from '../hooks/useSSE';
 import { NotificationContext, type Notification } from './NotificationBase';
