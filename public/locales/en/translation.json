@@ -184,5 +184,38 @@
         "error_credentials": "Invalid credentials. Please checking your phone number and PIN.",
         "error_missing_fields": "Please enter both phone number and PIN.",
         "powered_by": "Powered by Eco"
+    },
+    "orders": {
+        "title": "Orders",
+        "subtitle": "Manage and track customer orders.",
+        "table": {
+            "id": "Order ID",
+            "customer": "Customer",
+            "amount": "Total Amount",
+            "status": "Status",
+            "date": "Date",
+            "method": "Payment Method",
+            "items": "Items",
+            "actions": "Actions"
+        },
+        "status": {
+            "pending": "Pending",
+            "pending_verification": "Verify Payment",
+            "confirmed": "Confirmed",
+            "shipped": "Shipped",
+            "delivered": "Delivered",
+            "cancelled": "Cancelled"
+        },
+        "actions": {
+            "view_proof": "View Proof",
+            "confirm": "Confirm Order",
+            "cancel": "Cancel Order",
+            "mark_shipped": "Mark as Shipped",
+            "mark_delivered": "Mark as Delivered"
+        },
+        "proof_modal": {
+            "title": "Payment Proof",
+            "close": "Close"
+        }
     }
 }

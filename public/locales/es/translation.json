@@ -185,5 +185,38 @@
         "error_credentials": "Credenciales inválidas. Por favor verifique su número y PIN.",
         "error_missing_fields": "Por favor ingrese tanto el número como el PIN.",
         "powered_by": "Powered by Eco"
+    },
+    "orders": {
+        "title": "Órdenes",
+        "subtitle": "Gestiona y rastrea los pedidos de clientes.",
+        "table": {
+            "id": "ID Orden",
+            "customer": "Cliente",
+            "amount": "Total",
+            "status": "Estado",
+            "date": "Fecha",
+            "method": "Método Pago",
+            "items": "Artículos",
+            "actions": "Acciones"
+        },
+        "status": {
+            "pending": "Pendiente",
+            "pending_verification": "Verificar Pago",
+            "confirmed": "Confirmado",
+            "shipped": "Enviado",
+            "delivered": "Entregado",
+            "cancelled": "Cancelado"
+        },
+        "actions": {
+            "view_proof": "Ver Comprobante",
+            "confirm": "Confirmar Orden",
+            "cancel": "Cancelar Orden",
+            "mark_shipped": "Marcar Enviado",
+            "mark_delivered": "Marcar Entregado"
+        },
+        "proof_modal": {
+            "title": "Comprobante de Pago",
+            "close": "Cerrar"
+        }
     }
 }

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Calendar, Users, Settings, X, Leaf, LogOut } from 'lucide-react';
+import { LayoutDashboard, Calendar, Users, Settings, X, Leaf, LogOut, ShoppingCart } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { Button } from './../ui/button';
 import { useTranslation } from 'react-i18next';
@@ -18,6 +18,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
 
     const links = [
         { icon: LayoutDashboard, label: t('common.inbox'), href: '/inbox', count: 3 },
+        { icon: ShoppingCart, label: t('orders.title'), href: '/orders' },
         { icon: Calendar, label: t('common.calendar'), href: '/calendar' }, // Need key for calendar? defaulting to literal or add key later
         { icon: Users, label: t('common.contacts'), href: '/contacts' },
         { icon: Settings, label: t('common.settings'), href: '/settings' },

@@ -152,4 +152,36 @@ export const updateSettings = async (settings: Partial<SettingsResponse>) => {
     return response.data.data;
 };
 
+// Orders
+export interface OrderItem {
+    productId: string;
+    name: string;
+    quantity: number;
+    price: number;
+    currency: string;
+}
+
+export interface Order {
+    _id: string;
+    contactId: Contact;
+    items: OrderItem[];
+    totalAmount: number;
+    currency: string;
+    status: 'pending' | 'pending_verification' | 'confirmed' | 'shipped' | 'delivered' | 'cancelled';
+    paymentMethod: 'transfer' | 'cash' | 'not_specified';
+    paymentProofUrl?: string;
+    deliveryAddress?: string;
+    createdAt: string;
+}
+
+export const getOrders = async (params?: { status?: string }) => {
+    const response = await api.get('/orders', { params });
+    return response.data.data;
+};
+
+export const updateOrderStatus = async (id: string, status: string) => {
+    const response = await api.patch(`/orders/${id}/status`, { status });
+    return response.data.data;
+};
+
 export default api;

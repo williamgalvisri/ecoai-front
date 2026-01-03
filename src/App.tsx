@@ -6,6 +6,7 @@ import CalendarPage from './pages/Calendar';
 import ContactsPage from './pages/Contacts';
 import Settings from './pages/Settings';
 import Login from './pages/Login';
+import Orders from './pages/Orders';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 
 import { NotificationProvider } from './context/NotificationContext';
@@ -23,6 +24,7 @@ function App() {
               <Route path="/" element={<Layout />}>
                 <Route index element={<Navigate to="/inbox" replace />} />
                 <Route path="inbox" element={<Inbox />} />
+                <Route path="orders" element={<Orders />} />
                 <Route path="calendar" element={<CalendarPage />} />
                 <Route path="contacts" element={<ContactsPage />} />
                 <Route path="settings" element={<Settings />} />
