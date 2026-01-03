@@ -10,19 +10,13 @@ import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu';
-import {
     Dialog,
     DialogContent,
     DialogHeader,
     DialogTitle,
     DialogDescription,
 } from '../components/ui/dialog';
-import { MoreHorizontal, Image as ImageIcon, Loader2, Eye, Package } from 'lucide-react';
+import { Image as ImageIcon, Loader2, Eye, Package } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export default function Orders() {
